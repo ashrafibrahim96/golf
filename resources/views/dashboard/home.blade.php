@@ -94,7 +94,7 @@
                             </div>
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
-                                    <p class="card-category">Associations Golfiques</p>
+                                    <p class="card-category">Associations</p>
                                     <p class="card-title">8<p>
                                 </div>
                             </div>
