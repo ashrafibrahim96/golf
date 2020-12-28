@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
- <?php echo $reservation; ?>
+ <?php echo $reservations; ?>
     <div class="col-md-12">
         <div class="card card-user">
             <div class="card-header">
@@ -24,7 +24,7 @@
                      <th>Les location</th>
                     <th>Action</th>
                     <tr>
-                        @foreach ($reservation as $reservation)
+                        @foreach ($reservations as $reservation)
 
                             <td>   {{$reservation->reservation_id}}</td>
                             <td>   {{$reservation->name}}</td>
