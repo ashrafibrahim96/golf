@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
- <?php echo $reservations; ?>
+ <?php echo $reservation; ?>
     <div class="col-md-12">
         <div class="card card-user">
             <div class="card-header">
