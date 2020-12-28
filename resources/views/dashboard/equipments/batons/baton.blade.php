@@ -37,11 +37,11 @@
 
 
                             <td>   {{$baton->distance}}</td>
-<<<<<<< HEAD
-                            <td> <img src="{{URL::to('assets/img/')}}/{{$baton->photo}}" style="width:50px"> </td>
-=======
+
+                            
+
                             <td> <img src="{{URL::to('assets/batons/')}}/{{$baton->photo}}" style="width:50px"> </td>
->>>>>>> 136ee61 (First Commit)
+
                             <td>
                                 <form action="{{ route('baton.destroy',$baton->id) }}" method="POST">
                                     <a class="btn btn-primary" href="{{ route('baton.edit',$baton->id) }}">Edit</a>
