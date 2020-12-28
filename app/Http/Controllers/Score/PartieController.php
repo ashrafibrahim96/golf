@@ -794,6 +794,6 @@ class PartieController extends Controller
      * @return \Illuminate\Support\Collection
      */
     public function index_trous(Request $request) {
-        return  DB::table('trous')->get() ;
+        return  DB::table('trous')->orderBy('id', 'asc')->get() ;
     }
 }
