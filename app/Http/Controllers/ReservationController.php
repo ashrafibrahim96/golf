@@ -21,7 +21,7 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        $reservations = DB::table('reservations')->get();
+        $reservation=Reservation::latest()->paginate(5);
         //$reservation_id=Reservation::select('id')->get();
         $match=Match::select('id','nom')->get();
 
@@ -37,14 +37,8 @@ class ReservationController extends Controller
         $loc = DB::table('location_reservation')
             ->join('locations', 'location_reservation.location_id', '=', 'locations.id')
             ->join('reservations', 'location_reservation.reservation_id', '=', 'reservations.id')
-            ->join('users', 'reservations.user_id', '=', 'users.id')  ->get();
-            //->join('matches', 'reservations.match_id', '=', 'matches.id')
-
-            //->select(DB::raw('matches.*','matches.nom as yyy','matches.tarif as xxx'))
-
-            //->select('matches.nom as yyy', 'matches.tarif as xxx')
-            //->where('reservation_id' , $reservation_id)
-
+            ->join('users', 'reservations.user_id', '=', 'users.id')
+            ->get();
         //$mat = DB::table('reservations')
             //->join('matches', 'reservations.match_id', '=', 'matches.id')
             //->select('matches.nom as yyy', 'matches.tarif as xxx')
@@ -52,7 +46,7 @@ class ReservationController extends Controller
            // ->get();
 
 
-        return view('dashboard.reservations.reservation',compact('loc','match','reservations'))
+        return view('dashboard.reservations.reservation',compact('loc','match'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
