@@ -40,7 +40,7 @@
 
                             
 
-                            <td> <img src="{{URL::to('assets/batons/')}}/{{$baton->photo}}" style="width:50px"> </td>
+                            <td> <img src="{{URL::to('assets/batons/')}}/{{$baton->photo}}" style="height:200px"> </td>
 
                             <td>
                                 <form action="{{ route('baton.destroy',$baton->id) }}" method="POST">
