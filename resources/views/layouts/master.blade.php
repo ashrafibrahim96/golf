@@ -57,13 +57,7 @@
                         <p>Equipments</p>
                     </a>
                 </li>
-                <li class="{{ Request::is('reservation') ? 'active' : '' }}">
-                    <a href="{{url('/reservation')}}">
-                        <i class="nc-icon nc-single-02"></i>
-                        <p>Reservation</p>
-                    </a>
-
-                </li>
+               
                  <li class="{{ Request::is('messages') ? 'active' : '' }}">
                      <a href="{{ route('message.index') }}">
                          <i class="nc-icon nc-chat-33"></i>
