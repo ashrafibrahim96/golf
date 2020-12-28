@@ -24,7 +24,7 @@
                      <th>Les location</th>
                     <th>Action</th>
                     <tr>
-                        @foreach ($loc as $reservation)
+                        @foreach ($reservation as $reservation)
 
                             <td>   {{$reservation->reservation_id}}</td>
                             <td>   {{$reservation->name}}</td>
