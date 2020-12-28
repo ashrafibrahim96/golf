@@ -32,9 +32,5 @@ class Reservation extends Model
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
-     public function __construct(Request $request)
-    {
-        $this->match_id = $request->match_id ;
-        $this->date_matche = $request->date_matche ;
-    }
+   
 }
