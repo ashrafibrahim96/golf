@@ -215,7 +215,7 @@ class BatonController extends Controller
         ]) ;
     }
     public function displayAll(){
-        $batons = Baton::latest()->paginate(5);
+        $batons = Baton::latest()->paginate(18);
 
         return view('dashboard.equipments.batons.baton',compact('batons'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
