@@ -52,7 +52,7 @@ class ReservationController extends Controller
            // ->get();
 
 
-        return view('dashboard.reservations.reservation',compact('loc','match','$reservations'))
+        return view('dashboard.reservations.reservation',compact('loc','match','reservations'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
