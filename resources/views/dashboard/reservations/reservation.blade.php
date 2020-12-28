@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
- <?php echo $reservation; ?>
+ 
     <div class="col-md-12">
         <div class="card card-user">
             <div class="card-header">
@@ -24,7 +24,7 @@
                      <th>Les location</th>
                     <th>Action</th>
                     <tr>
-                        @foreach ($reservations as $reservation)
+                        @foreach ($loc as $reservation)
 
                          
                                 <form action="{{ route('reservation.destroy',$reservation->id) }}" method="POST">
