@@ -26,17 +26,7 @@
                     <tr>
                         @foreach ($reservations as $reservation)
 
-                            <td>   {{$reservation->reservation_id}}</td>
-                            <td>   {{$reservation->name}}</td>
-                            <td>   {{$reservation->date_matche}}</td>
-                            @if ($reservation->match_id=$match)
-                                <td>{{$match}}</td>
-                            @else
-                                <td>{{$match}}</td>
-                            @endif
-
-                            <td>{{$reservation->tarif}}</td>
-                            <td>
+                         
                                 <form action="{{ route('reservation.destroy',$reservation->id) }}" method="POST">
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
