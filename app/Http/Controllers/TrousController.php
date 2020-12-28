@@ -14,7 +14,7 @@ class TrousController extends Controller
      */
     public function index()
     {
-        $trous = Trou::paginate(18);
+        $trous = Trou::orderByDesc('id')->paginate(19);
 
         return view('dashboard.trous.trou',compact('trous'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
