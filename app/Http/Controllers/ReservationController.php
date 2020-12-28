@@ -21,7 +21,7 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        $reservation = DB::table('reservations')->get();
+        $reservations = DB::table('reservations')->get();
         //$reservation_id=Reservation::select('id')->get();
         $match=Match::select('id','nom')->get();
 
@@ -52,7 +52,7 @@ class ReservationController extends Controller
            // ->get();
 
 
-        return view('dashboard.reservations.reservation',compact('loc','match','reservation'))
+        return view('dashboard.reservations.reservation',compact('loc','match','$reservations'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
