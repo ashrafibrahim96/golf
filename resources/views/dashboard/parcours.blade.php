@@ -23,7 +23,7 @@
                     <th>ID</th>
                     <th>Nom du parcours</th>
                     <th>Nombre de trous</th>
-                    <th>ClubHouse id </th>
+                    <th>ClubHouse</th>
                     <th>Action</th>
 
                     @foreach ($parcours as $parcour)
