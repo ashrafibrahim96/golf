@@ -46,7 +46,9 @@ class ReservationController extends Controller
            // ->get();
 
 
-        return view('dashboard.reservations.reservation',compact('loc','match'));
+        return view('dashboard.reservations.reservation',compact('loc','match'))
+
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
     /**
      * Show the form for creating a new resource.
