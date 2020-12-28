@@ -24,17 +24,6 @@
                      <th>Les location</th>
                     <th>Action</th>
                     <tr>
-                        @foreach ($loc as $reservation)
-
-                         
-                                <form action="{{ route('reservation.destroy',$reservation->id) }}" method="POST">
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
-
-                            </td>
-                        </tr>
-                    @endforeach
 
                 </table>
             </div>
